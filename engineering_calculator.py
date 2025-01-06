@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import ttk
-
+# Shunting Yard algorithm
 class EngineeringCalculator:
     def __init__(self, root):
         self.root = root
@@ -23,7 +23,7 @@ class EngineeringCalculator:
 
         self.entry = tk.Entry(self.frame, width=40, borderwidth=5, bg="#3B4252", fg="#D8DEE9", insertbackground="#D8DEE9")
         self.entry.grid(row=0, column=0, columnspan=4, pady=10)
-
+        # we read btn from list here , genius LOL
         buttons = [
             '7', '8', '9', '/',
             '4', '5', '6', '*',

@@ -38,7 +38,7 @@ class MazeSolver:
         self.solved_canvas.grid(row=0, column=1, padx=10)
 
     def solve_maze(self):
-
+        #Breadth-First Search (BFS) algorithm implemented with a deque data structure
         self.original_canvas.delete("all")
         self.solved_canvas.delete("all")
 

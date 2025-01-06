@@ -82,15 +82,15 @@ class MusicPlayer:
         self.root.resizable(False, False)
 
     def create_ui(self):
-        # Main container
+        # main container
         main_container = tk.Frame(self.root, bg='#121212')
         main_container.pack(fill=tk.BOTH, expand=True, padx=10, pady=10)
 
-        # Song Info and Controls Container
+        # file info
         top_frame = tk.Frame(main_container, bg='#121212')
         top_frame.pack(fill=tk.X)
 
-        # Current Song Label
+        # current file 
         self.current_song_label = tk.Label(
             top_frame, 
             text="No Song Selected", 
@@ -101,7 +101,7 @@ class MusicPlayer:
         )
         self.current_song_label.pack(side=tk.LEFT, expand=True, fill=tk.X)
 
-        # Add Songs Button
+        # add btn
         add_btn = tk.Button(
             top_frame, 
             text="Add +", 
@@ -113,11 +113,11 @@ class MusicPlayer:
         )
         add_btn.pack(side=tk.RIGHT, padx=5)
 
-        # Playlist Frame
+        # playlist frame
         playlist_frame = tk.Frame(main_container, bg='#1E1E1E')
         playlist_frame.pack(fill=tk.BOTH, expand=True, pady=10)
 
-        # Listbox
+        
         self.song_listbox = tk.Listbox(
             playlist_frame, 
             bg='#1E1E1E', 
@@ -130,11 +130,11 @@ class MusicPlayer:
         )
         self.song_listbox.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
 
-        # Control Frame
+      
         control_frame = tk.Frame(main_container, bg='#121212')
         control_frame.pack(fill=tk.X, pady=5)
 
-        # Previous Button
+        # prev btn
         prev_btn = tk.Button(
             control_frame, 
             text="◀", 
@@ -146,7 +146,7 @@ class MusicPlayer:
         )
         prev_btn.pack(side=tk.LEFT, expand=True)
 
-        # Play/Pause Button
+        # play/pause btn
         self.play_pause_btn = tk.Button(
             control_frame, 
             text="►", 
@@ -158,7 +158,7 @@ class MusicPlayer:
         )
         self.play_pause_btn.pack(side=tk.LEFT, expand=True)
 
-        # Next Button
+        # next btn
         next_btn = tk.Button(
             control_frame, 
             text="▶", 
@@ -170,7 +170,7 @@ class MusicPlayer:
         )
         next_btn.pack(side=tk.LEFT, expand=True)
 
-        # Remove Button
+        # remove btn
         remove_btn = tk.Button(
             control_frame, 
             text="✖", 
