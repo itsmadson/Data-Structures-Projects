@@ -16,10 +16,9 @@ The program visualizes the original maze and the solved path side by side.
 **Features**:
 - BFS algorithm for finding the shortest path.
 - Interactive GUI for maze input and visualization.
-- Dark-themed design for a modern look.
 - Arrows to show the direction of the solution path.
-
-
+  
+![Screenshot from 2025-01-06 18-59-22](https://github.com/user-attachments/assets/7b98e06f-4777-4ee7-849c-ffd5dae69896)
 ---
 
 ### 2. Engineering Calculator
@@ -28,11 +27,9 @@ This project implements an engineering calculator using the Shunting Yard algori
 
 **Features**:
 - Shunting Yard algorithm for expression parsing.
-- Interactive GUI with a dark theme.
 - Error handling for invalid expressions.
 
-
-
+![Screenshot from 2025-01-06 18-52-15](https://github.com/user-attachments/assets/074a2e92-943f-49de-a1d6-d051eff88925)
 ---
 
 ### 3. Heap Tree Visualization
@@ -42,10 +39,8 @@ This project visualizes a max-heap data structure as a binary tree. Users can in
 **Features**:
 - Max-heap implementation with `heapify_up` and `heapify_down` functions.
 - Tree visualization using `tkinter` canvas.
-- Dark-themed design for better readability.
 
-
-
+![Screenshot from 2025-01-06 18-53-47](https://github.com/user-attachments/assets/7cffd158-dde2-4630-b192-7a751ce45a3c)
 ---
 
 ### 4. Music Player
@@ -55,17 +50,11 @@ This project is a music player that uses a **circular doubly linked list** to ma
 **Features**:
 - Circular doubly linked list for playlist management.
 - Play, pause, next, and previous functionality.
-- Modern, dark-themed GUI with a sleek design.
 - Supports `.mp3` files.
-
-
-
+  
+![Screenshot from 2025-01-06 19-01-03](https://github.com/user-attachments/assets/d73a6657-f991-4fae-8438-76c4a4fd2691)
 ---
-
-## How to Run the Projects
-
 ### Prerequisites
-- Python 3.x installed on your machine.
 - The `tkinter` library (usually included with Python).
 - The `pygame` library (for the Music Player). Install it using:
   ```bash

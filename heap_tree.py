@@ -53,8 +53,8 @@ class HeapTree:
         self.heap.pop()
         self.heapify_down(0)
         self.draw_heap()
-
-    def heapify_up(self, index):
+    #Max-heap implementation with heapify_up and heapify_down functions
+    def heapify_up(self, index):    
         parent = (index - 1) // 2
         if index > 0 and self.heap[index] > self.heap[parent]:
             self.heap[index], self.heap[parent] = self.heap[parent], self.heap[index]
