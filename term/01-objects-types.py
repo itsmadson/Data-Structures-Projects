@@ -186,4 +186,23 @@ class test():
     def __repr___(self): #representation for inspection purposes
         return 'a custum obj (%r)' % (self.greet)
 
-#inheritance
+#inheritance, usage in this case: when we have specialEmployee its employee but have something more.
+class specialemployee(employee):
+    def hours(self,numhours):
+        self.owed += numhours*self.rate*2 # special rate fot this group of employee
+        return ('%.2f hours worked' % numhours)
+#or for special bonus for each special employee:
+class newspecialemployee(employee):
+    def __init__(self,name,rate,bonus):
+        employee.__init__(self,name,rate) #call parent class
+        self.bonus=bonus
+    def hours(self,numhours):
+        self.owed +=numhours*self.rate * self.bonus
+
+#check inheritance
+print(issubclass(specialemployee,employee)) #check is subclass or not
+print(issubclass(employee,specialemployee))
+d= newspecialemployee('john',100,2)
+b = employee('akbar',100)
+print(isinstance(b,newspecialemployee)) #check this object is for that class or not
+print(isinstance(b,employee))
