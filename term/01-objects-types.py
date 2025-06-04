@@ -155,6 +155,35 @@ def oddgen(n,m):
         yield n # generate n, save state and call next time
         n+=2
 
+#classes and Objects
+class employee(object):
+    numemp=0
+    def __init__(self,name,rate): #initialize employee
+        self.owed=0
+        self.name=name
+        self.rate=rate
+        employee.numemp+=1 #if emp create +1 number of emp
+    def __del__(self):
+        employee.numemp-=1
+    def hours(self,numhours):
+        self.owed += numhours*self.rate
+        return('%.2f hours worked' % numhours)
+    def pay(self):
+        self.owed =0
+        return('payed %s'%self.name)
 
+#test it
+emp1=employee('john',100)
+emp2=employee('jack',200)
+print(employee.numemp)
+print(emp1.hours(20))
+print(emp1.owed ,' ' ,emp1.pay())
 
+#special methods in class
+class test():
+    def __init__(self,greet): #initializer
+        self.greet=greet
+    def __repr___(self): #representation for inspection purposes
+        return 'a custum obj (%r)' % (self.greet)
 
+#inheritance
