@@ -137,3 +137,24 @@ items2 = [['test',2.45,10],['test2',1.5,2],['test3',4.4,6]]
 items2.sort(key=lambda items2:items2[1]) #sort from lower
 print(items2)
 
+#recursive func
+#with iter
+def itertest(low,high):
+    while low <= high:
+        print(low)
+        low= low+1
+#with recursive
+def recurtest(low,high):
+    if low <= high:
+        print(low)
+        recurtest(low,high)
+
+#generators and co-routines
+def oddgen(n,m):
+    while n<m:
+        yield n # generate n, save state and call next time
+        n+=2
+
+
+
+
