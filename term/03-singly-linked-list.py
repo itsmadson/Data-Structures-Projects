@@ -68,17 +68,22 @@ class SinglyLinkedList:
     def delete (self,data):
         current = self.tail
         prev = self.tail
+        del_status = True
         while current:
-            if current.data == data:
+            if current & current.data == data:
                 if current == self.tail:
                     self.tail = current.next #garbage collection will delete nodes that no one point to it
+                    del_status = True
                 elif current.next == None: #for delete head
                     prev.next = None
                     self.head = prev
+                    del_status = True
                 else: #if its in the middle
                     prev.next = current.next
-                self.size -= 1
-                return
+                    del_status = True
+                if del_status:
+                    self.size -= 1
+
             prev = current
             current = current.next
 
