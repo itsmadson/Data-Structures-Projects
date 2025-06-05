@@ -15,14 +15,15 @@ print(see_boolean)
 r= 1-0.9
 print(0.1 == r) #false cuz its 0.0999999999999998 not 0.1, some memory stuff
 
-#membershio, identity
+#Membershio, identity
 x=[1,2,3]
 y=[1,2,3]
 print(x==y, x is y) # x is not y cuz they are in different part of memory only of x=y return True
 
 #sequences: string, list , tuple, range object
 #s+r concatenate just if two sequence are same type
-#list:
+
+#List:
 list1 = [1,2,4,5]
 list1.append(1) # append balue end of list
 print(list1 *2 )#make copy of each item of list1
@@ -37,7 +38,7 @@ list1.sort() #sort list
 list1.remove(42) #find and remove this
 print(list1)
 
-#tuple:
+#Tuple:
 t = tuple()
 print(type(t)) #class tuple
 t = ('a',) #tuple with 1 element
@@ -48,3 +49,35 @@ tpl4 = tpl*2 #repetition
 print('Length: ',len(tpl3),'Max: ',max(tpl3),'Min: ',min(tpl3))
 #tpl3[1] = 2  tuple is not allowed to do this, its immutable
 
+#Dictionary (Key/Value)
+#Hints: Keys should be unique, Values can be changed
+dic = {'monday':1,'tuesday':2,'wednesday':3}
+con = dict(zip(['monday','tuesday','wednesday'],[1,2,3])) # Convert two list into dictionary using ZIP
+con['Thursday']=4 # Add an item (Just one item)
+con.update({'friday':5,'Saturday':6}) # Add multiple items
+con.update(friday=7) #update the value of key 'friday'
+print ('wednesday' in con) #Check membership (only key) if its (5 in con) it will return False (cant use for values)
+zdic = dict(zip('test',range(5))) #make t:0 , e:1...
+print(zdic['e'],zdic.pop('s')) # return value of that key
+bdic = con.copy() # Make copy of con
+print('Just Values: ',bdic.values(),'Key/Value :',bdic.items())
+
+#Text Analysis with Dictionaries
+def wordcount (fname):
+    try:
+        fhand=open(fname)
+    except:
+        print('file cant opened')
+        return
+    count=dict()
+    for line in fhand:
+        words=line.split()
+        for word in words:
+            if word not in count:
+                count[word]=1
+            else:
+                count[word]+=1
+    return(count)
+
+count= wordcount('alice.txt')
+print(count)
