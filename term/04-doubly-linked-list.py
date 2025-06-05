@@ -68,5 +68,3 @@ class DoublyLinkedList:
     def clear (self): #for clear entire list we just need to unpoint tail and head, garbage collection fuck entire list
         self.tail = None
         self.head = None
-
-

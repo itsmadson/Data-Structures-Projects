@@ -1,7 +1,4 @@
 #Node
-from anyio import current_effective_deadline
-
-
 class Node:
 
     def __init__ (self,data=None): #simple node with data and next
