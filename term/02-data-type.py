@@ -1,4 +1,6 @@
 #Types
+from sympy.physics.units import length
+
 a=4;b=6
 print(a, 'is of type' , type(a)) #int
 print(type(9/5)) #float
@@ -41,3 +43,8 @@ print(type(t)) #class tuple
 t = ('a',) #tuple with 1 element
 tpl = ('s', 'e', 'q', 'u', 'e', 'n', 'c', 'e')
 print('a' in tpl, 'z'in tpl) #check membership
+tpl3 = t + tpl # tuple concatenation
+tpl4 = tpl*2 #repetition
+print('Length: ',len(tpl3),'Max: ',max(tpl3),'Min: ',min(tpl3))
+#tpl3[1] = 2  tuple is not allowed to do this, its immutable
+
