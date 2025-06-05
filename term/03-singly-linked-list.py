@@ -70,7 +70,7 @@ class SinglyLinkedList:
         prev = self.tail
         del_status = True
         while current:
-            if current & current.data == data:
+            if current and current.data == data:
                 if current == self.tail:
                     self.tail = current.next #garbage collection will delete nodes that no one point to it
                     del_status = True

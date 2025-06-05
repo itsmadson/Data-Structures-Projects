@@ -39,7 +39,7 @@ class DoublyLinkedList:
     def delete(self,data):
         current = self.tail
         del_status =False
-        if current & current.data == data : #if its first item
+        if current and current.data == data : #if its first item
             self.tail = self.tail.next
             self.tail.prev = None
             del_status = True
