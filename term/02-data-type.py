@@ -81,3 +81,20 @@ def wordcount (fname):
 
 count= wordcount('alice.txt')
 print(count)
+
+#Sets
+#set types do not provide any indexing or slicing operations
+s1 = set()
+s1.add(1) # add() is specific method for sets
+s1.add(2)
+s1.add(3)
+print(s1)
+s1.remove(2) #Remove that element
+s1.discard(1) #Remove do the same remove done.
+s1.clear() #Clear set when u return that: set() with no element
+#Sets Methods
+s2 = {5,'a',4,'m',12,'idk'}
+s3 = {4,15,28,'idk'}
+print('sub: ',s2-s3, 'use diffetence(): ', s2.difference(s3) , 'intersection: ',s2.intersection(s3), 'Union: ', s2.union(s3)) #So s2-s3 and s2.difference(s3) is the same
+print('idk' in s3, 'm' not in s2) #Check Membership
+for element in s2: print(element) #we can loop through elements
