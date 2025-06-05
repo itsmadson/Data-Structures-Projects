@@ -58,3 +58,15 @@ class DoublyLinkedList:
             self.size -= 1
 
 
+    def search (self,data):
+        for node in self.iter(): # use iter func traversal it return each node value
+            if data == node:
+                return True
+        return False
+
+
+    def clear (self): #for clear entire list we just need to unpoint tail and head, garbage collection fuck entire list
+        self.tail = None
+        self.head = None
+
+
