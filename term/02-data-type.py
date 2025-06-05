@@ -98,3 +98,13 @@ s3 = {4,15,28,'idk'}
 print('sub: ',s2-s3, 'use diffetence(): ', s2.difference(s3) , 'intersection: ',s2.intersection(s3), 'Union: ', s2.union(s3)) #So s2-s3 and s2.difference(s3) is the same
 print('idk' in s3, 'm' not in s2) #Check Membership
 for element in s2: print(element) #we can loop through elements
+
+#Deque
+from collections import deque
+dq = deque('abc') # ['a','b','c'] make list form that sequence
+dq.append('d') # add to end of the list
+dq.appendleft('z') #add from left
+dq.extend('efg') # add multiple items, right
+dq.extendleft('idk') # add multiple items, left
+print(dq.pop(), dq.popleft(),dq.rotate(2)) #pop item from right | pop item from left | rotate all items 2 step to the right
+print(dq)
