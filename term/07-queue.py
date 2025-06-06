@@ -20,19 +20,19 @@ class ListQueue:
 class Queue:
 
     def __init__(self):
-        self.inbound_stack = []
-        self.outbound_stack = []
+        self.inbound_stack = [] # input list
+        self.outbound_stack = [] # output list (we will reverse it)
 
 
     def enqueue(self,data):
-        self.inbound_stack.append(data)
+        self.inbound_stack.append(data) # add to list form right
 
 
     def dequeue(self):
-        if not self.outbound_stack:
-            while self.inbound_stack:
-                self.outbound_stack.append(self.inbound_stack.pop())
-        return self.outbound_stack.pop()
+        if not self.outbound_stack: #if we dont create outbound before
+            while self.inbound_stack: # all items in inbound list
+                self.outbound_stack.append(self.inbound_stack.pop()) # reverse list with pop from inbound and append that in out
+        return self.outbound_stack.pop() # now last item in outbound is first item in inbound list
 
 
 #test it
