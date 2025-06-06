@@ -4,7 +4,7 @@ class Node:
         self.next = None
 
 
-class stack:
+class stack: #LIFO
 
     def __init__(self):
         self.top = None #last item
