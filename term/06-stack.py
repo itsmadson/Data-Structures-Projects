@@ -40,4 +40,31 @@ class stack:
             return None
 
 
-#Bracket Matching (like ide or for calculators)
+#Bracket Matching (like ide or calculators)
+def check_brackets(statement):
+    s = stack()
+    opening = '({['
+    closing = ')}]'
+    matches = {')':'(','}':'{',']':'['}
+    for ch in statement:
+        if ch in opening:
+            s.push(ch)
+        if ch in closing:
+            top = s.pop()
+            if top != matches[ch]:
+                return False
+    if s.size > 0:
+        return False
+    else:
+        return True
+
+#test it
+s1 = (
+"{(foo)(bar)}[hello](((this)is)a)test",
+"{(foo)(bar)}[hello](((this)is)atest",
+"{(foo)(bar)}[hello](((this)is)a)test))"
+)
+
+for s in s1:
+    res = check_brackets(s)
+    print("{}: {}".format(s, res))
