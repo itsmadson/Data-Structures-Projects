@@ -46,12 +46,12 @@ def check_brackets(statement):
     opening = '({['
     closing = ')}]'
     matches = {')':'(','}':'{',']':'['}
-    for ch in statement:
-        if ch in opening:
-            s.push(ch)
+    for ch in statement: #get each character form sequence
+        if ch in opening: #if this ([{
+            s.push(ch) # we just push opening
         if ch in closing:
-            top = s.pop()
-            if top != matches[ch]:
+            top = s.pop() # if ch is closing we should check its match with last opening or not
+            if top != matches[ch]: #if it dosent match return false
                 return False
     if s.size > 0:
         return False
