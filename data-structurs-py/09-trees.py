@@ -64,5 +64,6 @@ while current:
 print('inorder: ',n1.inorder(n1))
 print('postorder: ',n1.postorder(n1))
 print('preorder: ',n1.preorder(n1))
-
+#test bfs
+print(Node.bfs(n1))
 
