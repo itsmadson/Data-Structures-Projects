@@ -1,5 +1,3 @@
-from more_itertools.more import substrings
-
 a = [2,4,6]
 b = a
 a.append(8)
