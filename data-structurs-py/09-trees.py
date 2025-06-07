@@ -34,9 +34,10 @@ class Node:
         print(current.data) #then root
 
 
-    def bfs(self):
+    def bfs(self,root_node):
+        root = root_node
         list_of_nodes = []
-        traversal_queue = deque([self.root_node])
+        traversal_queue = deque([root])
         while len(traversal_queue) > 0:
             node = traversal_queue.popleft()
             list_of_nodes.append(node.data)
@@ -65,5 +66,5 @@ print('inorder: ',n1.inorder(n1))
 print('postorder: ',n1.postorder(n1))
 print('preorder: ',n1.preorder(n1))
 #test bfs
-print(Node.bfs(n1))
+print('bfs :',n1.bfs(n1))
 
