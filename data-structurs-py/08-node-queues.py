@@ -35,3 +35,4 @@ class Queue:
              self.tail = self.tail.next
              self.tail.prev = None
              self.size -= 1
+        return current.data

@@ -65,7 +65,7 @@ class SinglyLinkedList:
     def delete (self,data):
         current = self.tail
         prev = self.tail
-        del_status = True
+        del_status = False
         while current:
             if current and current.data == data:
                 if current == self.tail:

@@ -1,6 +1,4 @@
 #Types
-from sympy.physics.units import length
-
 a=4;b=6
 print(a, 'is of type' , type(a)) #int
 print(type(9/5)) #float
